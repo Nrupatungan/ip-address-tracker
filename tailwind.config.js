@@ -32,9 +32,8 @@ module.exports = {
       },
       
       minHeight: {
-        'spec': '100svh',
-        'header': '35svh',
-        'map': '65svh',
+        'header': '35vh',
+        'map': '65vh',
       }
     },
   },
