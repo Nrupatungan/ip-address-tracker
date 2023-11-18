@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="shortcut icon" href="./assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+
+    <title>Frontend Mentor | IP Address Tracker</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./dist/output.css">
+
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+
+    <script src="./app/js/script.js" defer></script>
+
+  </head>
+  <body class="font-Rubik min-h-spec">
+    <header class="bg-pattern-mobile md:bg-pattern-desktop bg-no-repeat bg-cover pt-6 px-6 text-center relative min-h-header lg:pt-8">
+      <h1 class="text-2xl lg:text-3xl text-white font-medium mb-6">IP Address Tracker</h1>
+      <form action="/" method="get" class="w-full mb-6 lg:mb-14">
+        <fieldset class="h-12 flex w-full overflow-hidden max-w-[600px] rounded-xl mx-auto">  
+          <input id="ip" name="ip" type="text" placeholder="Search for any IP address or domain" class="h-full w-full ps-4 min-[665px]:text-center outline-none">
+          <input type="submit" value="" class="bg-black bg-arrow-icon bg-no-repeat w-16 bg-center h-full cursor-pointer active:scale-50 transition-all delay-100 ease-linear">
+        </fieldset>
+      </form>
+
+      <section class="bg-white z-10 min-w-mobile min-[665px]:min-w-tablet lg:min-w-[990px] lg:flex rounded-xl py-6 lg:py-8 px-11 lg:ps-10 lg:pe-[7.3rem] text-center lg:text-left absolute left-[50%] translate-x-[-50%]">
+        <article class="mb-4 lg:m-0 lg:mr-7 lg:pr-14 lg:border-r-2 lg:border-Dark_Gray">
+          <h2 class="text-[.65rem] mb-1 lg:mb-3 tracking-widest uppercase font-bold text-Dark_Gray">IP Address</h2>
+          <p data-ip class="font-medium text-xl text-Very_Dark_Gray">49.43.241.211</p>
+        </article>
+        <article class="mb-4 lg:m-0 lg:mr-7 lg:pr-14 lg:border-r-2 lg:border-Dark_Gray">
+          <h2 class="text-[.65rem] mb-1 lg:mb-3 tracking-widest uppercase font-bold text-Dark_Gray">Location</h2>
+          <p data-location class="font-medium  text-xl text-Very_Dark_Gray">Bengaluru, State of Karnataka</p>
+        </article>
+        <article class="mb-4 lg:m-0 lg:mr-7 lg:pr-14 lg:border-r-2 lg:border-Dark_Gray">
+          <h2 class="text-[.65rem] mb-1 lg:mb-3 tracking-widest uppercase font-bold text-Dark_Gray">Timezone</h2>
+          <p data-timezone class="font-medium text-xl text-Very_Dark_Gray">UTC +05:30</p>
+        </article>
+        <article class= "">
+          <h2 class="text-[.65rem] mb-1 lg:mb-3 tracking-widest uppercase font-bold text-Dark_Gray">ISP</h2>
+          <p data-isp class="font-medium  text-xl text-Very_Dark_Gray">Reliance Jio</p>
+        </article>
+        
+      </section>
+
+    </header>
+
+    <div id="map" class="min-w-map min-w-full bg-black min-h-map -z-0"></div>
+
+  </body>
+</html>
